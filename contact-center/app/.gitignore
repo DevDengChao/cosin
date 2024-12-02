@@ -1,5 +1,5 @@
 # dev profile
-src/main/resources/application-dev.properties
+#src/main/resources/application-dev.properties
 
 # ignore plugins: app views, classes
 src/main/resources/templates/apps/callout
