@@ -16,6 +16,7 @@ package com.cskefu.cc;
 
 import com.cskefu.cc.basic.Constants;
 import com.cskefu.cc.basic.MainContext;
+import com.cskefu.cc.config.AppCtxRefreshEventListener;
 import com.cskefu.cc.util.SystemEnvHelper;
 import com.cskefu.cc.util.mobile.MobileNumberUtils;
 import jakarta.servlet.MultipartConfigElement;
@@ -97,7 +98,7 @@ public class Application {
                     .build();
             app.setBannerMode(Banner.Mode.CONSOLE);
             app.setAddCommandLineProperties(false);
-//            app.addListeners(new AppCtxRefreshEventListener());
+            app.addListeners(new AppCtxRefreshEventListener());
             
             MainContext.setApplicationContext(app.run(args));
         } catch (IOException e) {
