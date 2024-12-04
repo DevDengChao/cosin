@@ -24,7 +24,6 @@ import com.cskefu.cc.model.BlackEntity;
 import com.cskefu.cc.model.SysDic;
 import com.cskefu.cc.model.SystemConfig;
 import com.cskefu.cc.persistence.repository.*;
-import com.cskefu.cc.proxy.LicenseProxy;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -138,9 +137,6 @@ public class AppCtxRefreshEventListener implements ApplicationListener<ContextRe
                 logger.info("[Plugins] registered plugin id {}, class {}", p.getPluginId(), p.getClass().getName());
             }
 
-            // 初始化 ServerInstId
-            LicenseProxy licenseProxy = event.getApplicationContext().getBean(LicenseProxy.class);
-            licenseProxy.checkOnStartup();
         } else {
             logger.info("[onApplicationEvent] bypass, initialization has been done already.");
         }

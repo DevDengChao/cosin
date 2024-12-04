@@ -21,6 +21,9 @@ import com.cskefu.cc.model.*;
 import com.cskefu.cc.peer.PeerSyncIM;
 import com.cskefu.cc.persistence.repository.*;
 import com.cskefu.cc.socketio.message.Message;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,10 +33,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
-
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.*;
@@ -96,9 +95,6 @@ public class AgentUserProxy {
     @Autowired
     @Lazy
     private PeerSyncIM peerSyncIM;
-
-    @Autowired
-    private LicenseProxy licenseProxy;
 
     /**
      * 与联系人主动聊天前查找获取AgentUser
