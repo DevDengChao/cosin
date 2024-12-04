@@ -6,7 +6,7 @@
     <artifactId>contact-center</artifactId>
     <packaging>war</packaging>
     <name>cc-core</name>
-    <version>2024.1204.1</version>
+    <version>2024.1204.2</version>
     <description>春松客服：开源客服系统</description>
     <licenses>
         <license>
